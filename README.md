@@ -64,11 +64,7 @@ Assignment 2 extends the NLP preprocessing techniques with feature engineering a
 **Implementation Details:**
 - Using `Word2Vec` from Gensim library
 - Input text must contain 200+ words for meaningful embeddings
-- Parameters:
-  - `vector_size`: Dimension of word vectors (e.g., 100)
-  - `window`: Context window size (e.g., 5 words)
-  - `min_count`: Minimum word frequency threshold
-  - `workers`: Number of threads for training
+  
 
 **Similarity Analysis:**
 - Computes cosine similarity between word vectors
@@ -96,8 +92,6 @@ All implementations can be found in `Text_Pre_processing_techniques.ipynb`:
 - `numpy`: Numerical computations
 - `scipy`: Scientific computing
 
-## Assignment Deadline
-**Sunday, 10:00 AM**
 
 ## Conclusion
 Understanding and implementing these preprocessing and feature engineering techniques are crucial steps in preparing text data for any NLP task. This project provides foundational insights into:

@@ -1,19 +1,15 @@
-# NLP Preprocessing Techniques
+# Assignment 2: Feature Engineering
 
-## Project Overview
-This project is dedicated to exploring various Natural Language Processing (NLP) preprocessing techniques that transform raw text into a format suitable for analysis. NLP preprocessing is vital for tasks such as sentiment analysis, text classification, and machine translation, as it helps improve model performance by cleaning and structuring data appropriately.
+## Feature Engineering Techniques
 
-### Key Techniques Explored in This Project:
-1. **Tokenization**: Splitting text into individual words or phrases.
-2. **Lowercasing**: Converting all text to lowercase to maintain uniformity.
-3. **Removing Punctuation**: Eliminating special characters and punctuation marks.
-4. **Stop Words Removal**: Filtering out common words that contribute little meaning.
-5. **Stemming and Lemmatization**: Reducing words to their root forms.
-6. **N-grams Generation**: Creating sequences of N items from the text.
-7. **Text Normalization**: Standardizing text representation.
+1. **Bag of Words (BoW)**: An approach to text representation where each document is represented as a vector of word counts. It disregards grammar and word order but retains multiplicity. This model can be used for various tasks like text classification and sentiment analysis.
 
-## Code Implementation
-The implementation of the above techniques can be found in the `Text_Pre_processing_techniques.ipynb` notebook. Below is a summary of the relevant code snippets:
+2. **TF-IDF**: Stands for Term Frequency-Inverse Document Frequency. It's a numerical statistic that reflects how important a word is to a document in a collection. TF-IDF is often used in text mining and information retrieval.
 
-## Conclusion
-Understanding and implementing these preprocessing techniques are crucial steps in preparing text data for any NLP task. This project aims to provide a foundational insight into how preprocessing affects the quality of NLP models, ultimately leading to more accurate predictions and analyses.
+## Word2Vec Implementation
+
+**Word2Vec** is a popular word embedding technique that allows words to be represented in continuous vector space, capturing contextual relations between words. It consists of two main architectures:
+- Continuous Bag of Words (CBOW)
+- Skip-Gram
+
+Using libraries such as Gensim, we can easily implement Word2Vec to create word embeddings that improve model performance in natural language processing tasks.

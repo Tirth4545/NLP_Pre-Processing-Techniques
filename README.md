@@ -1,103 +1,99 @@
-# NLP Preprocessing Techniques
+# NLP Preprocessing, Feature Engineering and Text Analytics
 
 ## Project Overview
-This project is dedicated to exploring various Natural Language Processing (NLP) preprocessing techniques that transform raw text into a format suitable for analysis. NLP preprocessing is vital for tasks such as sentiment analysis, text classification, and machine translation, as it helps improve model performance by cleaning and structuring data appropriately.
+This project demonstrates a complete Natural Language Processing (NLP) pipeline starting from text preprocessing to feature engineering, similarity measurement, text classification, and clustering.
 
-### Key Techniques Explored in This Project:
-1. **Tokenization**: Splitting text into individual words or phrases.
-2. **Lowercasing**: Converting all text to lowercase to maintain uniformity.
-3. **Removing Punctuation**: Eliminating special characters and punctuation marks.
-4. **Stop Words Removal**: Filtering out common words that contribute little meaning.
-5. **Stemming and Lemmatization**: Reducing words to their root forms.
-6. **N-grams Generation**: Creating sequences of N items from the text.
-7. **Text Normalization**: Standardizing text representation.
-
-## Code Implementation
-The implementation of the above techniques can be found in the `Text_Pre_processing_techniques.ipynb` notebook. Below is a summary of the relevant code snippets:
+The aim is to convert raw text into meaningful numerical representations and apply machine learning techniques for analysis.
 
 ---
 
-# Assignment 2: Feature Engineering and Word Embeddings
+## Assignment 1: Text Preprocessing
 
-## Overview
-Assignment 2 extends the NLP preprocessing techniques with feature engineering and advanced word embedding methods. This assignment focuses on converting preprocessed text into numerical representations suitable for machine learning models.
+The following preprocessing techniques are implemented:
 
-## Assignment Tasks
+- Tokenization (splitting text into words)
+- Lowercasing (converting text to lowercase)
+- Punctuation removal
+- Stop word removal
+- Stemming (reducing words to root form)
+- Lemmatization (converting words to base form)
 
-### Task 1: Feature Engineering Techniques
+File: `Text_Pre_processing_techniques (1).ipynb`
 
-#### 1.1 Bag of Words (BoW)
-**Bag of Words** is a text representation technique where:
-- Each document is converted into a vector of word frequencies
-- Grammar and word order are disregarded
-- Word multiplicity (frequency) is preserved
-- Useful for text classification, sentiment analysis, and document similarity
+---
 
-**Implementation Details:**
-- Using `CountVectorizer` from sklearn
-- Creates a matrix where each row represents a document and columns represent unique words
-- Values represent word frequencies in each document
+## Assignment 2: Feature Engineering and Word Embeddings
 
-#### 1.2 TF-IDF (Term Frequency-Inverse Document Frequency)
-**TF-IDF** is a numerical statistic that:
-- Reflects how important a word is to a document in a collection
-- Combines two metrics:
-  - **TF (Term Frequency)**: How often a word appears in a document
-  - **IDF (Inverse Document Frequency)**: How unique/rare a word is across documents
-- Highlights words that are both frequent and discriminative
+### Feature Engineering
 
-**Implementation Details:**
-- Using `TfidfVectorizer` from sklearn
-- Produces normalized vectors with TF-IDF weights
-- Better than BoW for highlighting important terms
+Bag of Words (BoW):
+- Converts text into frequency-based vectors
+- Ignores word order and grammar
 
-### Task 2: Word2Vec Implementation
+TF-IDF:
+- Assigns importance to words based on frequency
+- Reduces weight of commonly used words
 
-**Word2Vec** is an advanced word embedding technique that:
-- Represents words in a continuous vector space
-- Captures semantic and contextual relationships between words
-- Uses neural networks to learn word representations
-- Consists of two architectures:
-  - **Continuous Bag of Words (CBOW)**: Predicts target word from context words
-  - **Skip-Gram**: Predicts context words from target word
+### Word2Vec
 
-**Implementation Details:**
-- Using `Word2Vec` from Gensim library
-- Input text must contain 200+ words for meaningful embeddings
-  
+- Converts words into numerical vectors
+- Captures relationships between words
+- Uses cosine similarity to compare words
 
-**Similarity Analysis:**
-- Computes cosine similarity between word vectors
-- Identifies semantically similar words
-- Range: -1 (opposite) to +1 (identical)
+---
 
-## Notebook Implementation
-All implementations can be found in `Text_Pre_processing_techniques.ipynb`:
+## Assignment 3: Similarity, Classification and Clustering
 
-### Key Outputs:
-1. **BoW Feature Matrix**: Word frequency vectors
-2. **TF-IDF Matrix**: Weighted importance vectors
-3. **Word2Vec Model**: Trained embeddings on 200+ word dataset
-4. **Similarity Scores**: Relationships between key terms
+### Cosine Similarity
+- Measures similarity between sentences
+- Value ranges from -1 to 1
 
-### Example Results from Word2Vec:
-- Similarity calculations between words like 'technology' and 'learning'
-- Most similar words to given terms
-- Semantic relationship discovery
+### Text Classification (Supervised Learning)
+- Algorithm used: Naive Bayes
+- Classifies text into predefined categories
 
-## Dependencies
-- `nltk`: Natural Language Toolkit
-- `scikit-learn`: Machine learning library (CountVectorizer, TfidfVectorizer)
-- `gensim`: Word2Vec implementation
-- `numpy`: Numerical computations
-- `scipy`: Scientific computing
+### Text Clustering (Unsupervised Learning)
+- Algorithm used: K-Means
+- Groups similar text without using labels
 
+File: `NLP_with_clustering_classification.ipynb`
+
+---
+
+## Project Structure
+
+NLP_Pre-Processing-Techniques/
+│
+├── Text_Pre_processing_techniques (1).ipynb
+├── NLP_with_clustering_classification.ipynb
+└── README.md
+
+---
+
+## Technologies Used
+
+- Python
+- NLTK
+- Scikit-learn
+- Gensim
+- NumPy
+- Pandas
+
+---
 
 ## Conclusion
-Understanding and implementing these preprocessing and feature engineering techniques are crucial steps in preparing text data for any NLP task. This project provides foundational insights into:
-- Converting raw text into numerical representations
-- Extracting meaningful features from text
-- Understanding semantic relationships between words
-- Building robust NLP pipelines for machine learning models
 
-These techniques form the foundation for more advanced NLP tasks such as sentiment analysis, machine translation, named entity recognition, and text classification.
+This project provides a clear understanding of:
+
+- Text preprocessing techniques
+- Feature extraction methods
+- Sentence similarity
+- Text classification and clustering
+
+These techniques are fundamental for real-world NLP applications such as sentiment analysis, chatbots, and text classification.
+
+---
+
+## Author
+
+Tirth Desai

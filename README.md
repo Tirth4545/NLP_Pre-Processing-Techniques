@@ -57,17 +57,6 @@ TF-IDF:
 - Groups similar text without using labels
 
 File: `NLP_with_clustering_classification.ipynb`
-
----
-
-## Project Structure
-
-NLP_Pre-Processing-Techniques/
-│
-├── Text_Pre_processing_techniques (1).ipynb
-├── NLP_with_clustering_classification.ipynb
-└── README.md
-
 ---
 
 ## Technologies Used
